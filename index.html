@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蘑菇社区 - 生活Vlog与手工创作分享平台</title>
+    <meta name="description" content="蘑菇社区，专注生活Vlog、手工艺制作与美食旅行等内容分享。年满18周岁用户可观看高清视频、互动交流，发现优质创作者与兴趣圈子。">
+    <meta name="keywords" content="蘑菇社区,生活Vlog,手工制作,美食视频,旅行记录,兴趣社区,短视频分享">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="广东蘑菇互娱信息技术有限公司">
+    <!-- OpenGraph Metadata -->
+    <meta property="og:site_name" content="蘑菇视频">
+    <meta property="og:title" content="蘑菇视频 - 中短视频与垂直兴趣社区 覆盖生活Vlog手工">
+    <meta property="og:description" content="精选生活Vlog、手工DIY等垂直领域中短视频，高清无延迟在线观看。这里有热门主播与创作者社区，提供多平台APP客户端官方安全下载。">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" rel="nofollow" src="/static/js/head.js"></script>
+    <script type="text/javascript" rel="nofollow" src="/static/js/statistics.js"></script>
+    <link rel="stylesheet" href="/static/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dopamine: {
+                            pink: '#ff007f',
+                            purple: '#7b2cbf',
+                            lime: '#39ff14',
+                            cyan: '#00f0ff',
+                            dark: '#0b0c10',
+                            card: '#1f2833'
+                        }
+                    },
+                    boxShadow: {
+                        'dopamine-glow': '0 0 20px rgba(255, 0, 127, 0.4)',
+                        'cyan-glow': '0 0 20px rgba(0, 240, 255, 0.4)',
+                        'lime-glow': '0 0 20px rgba(57, 255, 20, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0b0c10;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #7b2cbf;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #ff007f;
+        }
+    </style>
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "蘑菇视频",
+      "url": "https://www.mogu-video.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.mogu-video.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "蘑菇视频 APP",
+      "operatingSystem": "iOS, Android, Windows, macOS",
+      "applicationCategory": "MultimediaApplication",
+      "downloadUrl": "https://www.mogu-video.com/download",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "245890"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "CNY"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "蘑菇视频平台服务",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "245890"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "匠人木易"},
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "reviewBody": "在蘑菇视频分享手艺让我找到了许多志同道合的朋友，平台互动感非常棒！"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "小七的日记"},
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "reviewBody": "Vlog画质高清无卡顿，播放极速，无弹窗打扰，体验满分！"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-dopamine-dark text-slate-100 font-sans custom-scrollbar overflow-x-hidden">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-lg bg-dopamine-dark/90 border-b border-purple-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="/static/picture/favicon.png" alt="蘑菇视频LOGO" class="h-10 w-10 object-contain rounded-lg shadow-dopamine-glow">
+                <span class="text-2xl font-black bg-gradient-to-r from-dopamine-pink via-dopamine-purple to-dopamine-cyan bg-clip-text text-transparent">蘑菇视频</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider">
+                <a href="#hero" class="text-slate-300 hover:text-dopamine-pink transition-colors">推荐首页</a>
+                <a href="#stats" class="text-slate-300 hover:text-dopamine-cyan transition-colors">核心数据</a>
+                <a href="#leaderboard" class="text-slate-300 hover:text-dopamine-lime transition-colors">热门榜单</a>
+                <a href="#online-videos" class="text-slate-300 hover:text-dopamine-pink transition-colors">在线精选</a>
+                <a href="#download" class="text-slate-300 hover:text-dopamine-cyan transition-colors">APP下载</a>
+                <a href="#faq" class="text-slate-300 hover:text-dopamine-lime transition-colors">常见疑问</a>
+                <a href="/about.html" class="text-slate-300 hover:text-dopamine-pink transition-colors font-bold border-b border-dashed border-dopamine-pink">关于蘑菇视频</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button class="px-4 py-2 text-sm font-semibold text-slate-300 hover:text-white transition">登录</button>
+                <button class="px-5 py-2.5 text-sm font-bold text-dopamine-dark bg-gradient-to-r from-dopamine-pink to-dopamine-purple rounded-full hover:scale-105 transition-all shadow-dopamine-glow">免费注册</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative py-20 lg:py-32 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/30 via-dopamine-dark to-dopamine-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+                        蘑菇视频 <br>
+                        <span class="bg-gradient-to-r from-dopamine-pink via-dopamine-cyan to-dopamine-lime bg-clip-text text-transparent">
+                            中短视频与垂直兴趣社区
+                        </span>
+                    </h1>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto lg:mx-0">
+                        覆盖全网最燃的生活Vlog与手工艺创意分享。在这里，我们不单记录生活，更用指尖构筑热爱。海量无延迟超清画质内容，随时随地开启你的兴趣探索之旅。
+                    </p>
+                    
+                    <!-- Search Bar -->
+                    <form action="#" class="max-w-md mx-auto lg:mx-0 flex items-center p-1.5 rounded-full bg-slate-900 border-2 border-dopamine-purple focus-within:border-dopamine-pink shadow-dopamine-glow transition-all">
+                        <input type="text" placeholder="搜索原创手工、生活Vlog、热门主播..." class="w-full bg-transparent border-none outline-none pl-4 text-sm text-white placeholder-slate-500">
+                        <button type="submit" class="bg-gradient-to-r from-dopamine-pink to-dopamine-purple text-white px-6 py-2.5 rounded-full font-bold hover:opacity-90 transition">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+
+                    <!-- Tags -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-2.5">
+                        <span class="px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-xs font-semibold text-dopamine-pink"><i class="fas fa-video mr-1"></i> 原创视频</span>
+                        <span class="px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-xs font-semibold text-dopamine-cyan"><i class="fas fa-broadcast-tower mr-1"></i> 热门直播</span>
+                        <span class="px-3.5 py-1.5 rounded-full bg-lime-950/60 border border-lime-500/30 text-xs font-semibold text-dopamine-lime"><i class="fas fa-robot mr-1"></i> AI短视频</span>
+                        <span class="px-3.5 py-1.5 rounded-full bg-pink-950/60 border border-pink-500/30 text-xs font-semibold text-purple-300"><i class="fas fa-music mr-1"></i> 综艺娱乐</span>
+                        <span class="px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-300"><i class="fas fa-gamepad mr-1"></i> 动漫二次元</span>
+                        <span class="px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-300"><i class="fas fa-laugh mr-1"></i> 搞笑段子</span>
+                    </div>
+                </div>
+
+                <!-- Video / Stream Recommendation Cards (Right Side) -->
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Card 1 -->
+                    <div class="group relative rounded-2xl overflow-hidden bg-dopamine-card border border-purple-500/20 hover:border-dopamine-pink/50 transition-all hover:-translate-y-1">
+                        <div class="aspect-video sm:aspect-square bg-slate-800 relative">
+                            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/static/image/photo-1513519245088-0e12902e5a38.jpeg')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent"></div>
+                            <span class="absolute top-2 left-2 px-2 py-0.5 text-[10px] font-bold bg-dopamine-pink text-white rounded">LIVE</span>
+                            <span class="absolute top-2 right-2 px-2 py-0.5 text-[10px] bg-black/60 backdrop-blur text-slate-300 rounded"><i class="fas fa-eye mr-1"></i>2.4W</span>
+                            <div class="absolute bottom-2 left-2 right-2">
+                                <h3 class="text-xs font-bold text-white truncate">传统榫卯手工木工教学直播</h3>
+                                <p class="text-[10px] text-dopamine-lime truncate">主播：@匠心手艺人</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group relative rounded-2xl overflow-hidden bg-dopamine-card border border-purple-500/20 hover:border-dopamine-cyan/50 transition-all hover:-translate-y-1">
+                        <div class="aspect-video sm:aspect-square bg-slate-800 relative">
+                            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/static/image/photo-1542838132-92c53300491e.jpeg')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent"></div>
+                            <span class="absolute top-2 left-2 px-2 py-0.5 text-[10px] font-bold bg-dopamine-cyan text-slate-950">Vlog</span>
+                            <span class="absolute top-2 right-2 px-2 py-0.5 text-[10px] bg-black/60 backdrop-blur text-slate-300 rounded">10分钟前</span>
+                            <div class="absolute bottom-2 left-2 right-2">
+                                <h3 class="text-xs font-bold text-white truncate">治愈系田园慢生活日记</h3>
+                                <p class="text-[10px] text-dopamine-pink truncate">播放量：12.8W</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Stats Section -->
+    <section id="stats" class="py-16 bg-slate-950/80 border-y border-purple-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-6 rounded-2xl bg-dopamine-dark border border-slate-800 hover:border-dopamine-pink/35 transition">
+                    <div class="text-4xl lg:text-5xl font-black text-dopamine-pink tracking-tight">5,000万+</div>
+                    <div class="mt-2 text-sm text-slate-400 font-medium">每日活跃兴趣用户</div>
+                </div>
+                <div class="p-6 rounded-2xl bg-dopamine-dark border border-slate-800 hover:border-dopamine-cyan/35 transition">
+                    <div class="text-4xl lg:text-5xl font-black text-dopamine-cyan tracking-tight">20万+</div>
+                    <div class="mt-2 text-sm text-slate-400 font-medium">手工与Vlog核心创作者</div>
+                </div>
+                <div class="p-6 rounded-2xl bg-dopamine-dark border border-slate-800 hover:border-dopamine-lime/35 transition">
+                    <div class="text-4xl lg:text-5xl font-black text-dopamine-lime tracking-tight">1亿+</div>
+                    <div class="mt-2 text-sm text-slate-400 font-medium">总视频播放与直播交互</div>
+                </div>
+                <div class="p-6 rounded-2xl bg-dopamine-dark border border-slate-800 hover:border-dopamine-purple/35 transition">
+                    <div class="text-4xl lg:text-5xl font-black text-purple-400 tracking-tight">0延迟</div>
+                    <div class="mt-2 text-sm text-slate-400 font-medium">流媒体极速播放引擎</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Video Leaderboard & Comments -->
+    <section id="leaderboard" class="py-20 bg-dopamine-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">热门视频排行版块</h2>
+                <div class="h-1 w-20 bg-dopamine-pink mx-auto mt-4 rounded"></div>
+                <p class="mt-4 text-slate-400">汇聚每周最具人气的中短视频与手工作品，倾听真实的用户声音。</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Leaderboard Item 1 -->
+                <div class="relative bg-gradient-to-b from-dopamine-card to-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl group hover:border-dopamine-pink transition-all">
+                    <div class="absolute -top-5 left-6 w-10 h-10 bg-dopamine-pink text-white font-black text-xl rounded-full flex items-center justify-center shadow-dopamine-glow">1</div>
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden bg-slate-800 mb-6 relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/static/image/photo-1459749411175-04bf5292ceea.jpeg')"></div>
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                            <i class="fas fa-play-circle text-4xl text-dopamine-pink opacity-80 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-1">30天从零打造属于自己的户外木屋</h3>
+                    <p class="text-xs text-slate-400 mb-4"><i class="fas fa-user-circle mr-1"></i> @山野筑梦人</p>
+                    <div class="border-t border-slate-800 pt-4 bg-slate-900/60 p-3.5 rounded-xl">
+                        <p class="text-xs text-slate-300 italic">“视频剪辑配合音乐简直绝了！手工部分极其硬核，我已经用它做了一个猫舍！”</p>
+                        <p class="text-[10px] text-dopamine-pink mt-2 font-semibold">—— 评论用户：@木工狂热粉</p>
+                    </div>
+                </div>
+
+                <!-- Leaderboard Item 2 -->
+                <div class="relative bg-gradient-to-b from-dopamine-card to-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl group hover:border-dopamine-cyan transition-all">
+                    <div class="absolute -top-5 left-6 w-10 h-10 bg-dopamine-cyan text-slate-950 font-black text-xl rounded-full flex items-center justify-center shadow-cyan-glow">2</div>
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden bg-slate-800 mb-6 relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/static/image/photo-1556910103-1c02745aae4d.jpeg')"></div>
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                            <i class="fas fa-play-circle text-4xl text-dopamine-cyan opacity-80 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-1">一人一猫的独居做饭治愈日常Vlog</h3>
+                    <p class="text-xs text-slate-400 mb-4"><i class="fas fa-user-circle mr-1"></i> @猫咪与主厨</p>
+                    <div class="border-t border-slate-800 pt-4 bg-slate-900/60 p-3.5 rounded-xl">
+                        <p class="text-xs text-slate-300 italic">“每天下班必看的解压视频，画面色彩充满多巴胺的感觉，特别治愈疲惫的一天。”</p>
+                        <p class="text-[10px] text-dopamine-cyan mt-2 font-semibold">—— 评论用户：@朝九晚九</p>
+                    </div>
+                </div>
+
+                <!-- Leaderboard Item 3 -->
+                <div class="relative bg-gradient-to-b from-dopamine-card to-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl group hover:border-dopamine-lime transition-all">
+                    <div class="absolute -top-5 left-6 w-10 h-10 bg-dopamine-lime text-slate-950 font-black text-xl rounded-full flex items-center justify-center shadow-lime-glow">3</div>
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden bg-slate-800 mb-6 relative">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/static/image/photo-1534536281715-e28d76689b4d.jpeg')"></div>
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                            <i class="fas fa-play-circle text-4xl text-dopamine-lime opacity-80 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-1">非遗手工：古法扎染丝巾全流程揭秘</h3>
+                    <p class="text-xs text-slate-400 mb-4"><i class="fas fa-user-circle mr-1"></i> @蓝靛非遗工坊</p>
+                    <div class="border-t border-slate-800 pt-4 bg-slate-900/60 p-3.5 rounded-xl">
+                        <p class="text-xs text-slate-300 italic">“这才是高质量的兴趣短视频！步骤清晰明了，平台能推荐这类视频真的有品味。”</p>
+                        <p class="text-[10px] text-dopamine-lime mt-2 font-semibold">—— 评论用户：@文化传承守护人</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选影片视频在线区域 (Online Video Grid) -->
+    <section id="online-videos" class="py-20 bg-slate-950/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white">精选影片视频在线区域</h2>
+                    <p class="mt-2 text-slate-400">无限次免费在线观看，依托顶级流媒体CDN，体验超清无延迟的极速播放。</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex space-x-2">
+                    <button class="px-4 py-2 text-xs font-bold rounded-lg bg-dopamine-pink text-white">热门Vlog</button>
+                    <button class="px-4 py-2 text-xs font-bold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">创意手工</button>
+                    <button class="px-4 py-2 text-xs font-bold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">户外探索</button>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Video Item 1 -->
+                <div class="group bg-dopamine-card rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="aspect-video w-full bg-slate-800 relative overflow-hidden">
+                        <img src="/static/picture/photo-1543002088-bfa74002ed7e.jpeg" alt="创意手账Vlog" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[10px] bg-black/75 rounded text-white font-mono">04:32</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                            <span class="px-4 py-2 bg-dopamine-pink text-dopamine-dark rounded-full font-bold text-xs"><i class="fas fa-play mr-1"></i> 立即免密观看</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white truncate">日系极简手账设计全记录</h4>
+                        <div class="flex justify-between items-center mt-3 text-[11px] text-slate-400">
+                            <span><i class="fas fa-heart text-dopamine-pink mr-1"></i> 3.5万点赞</span>
+                            <span>无延迟播放</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="group bg-dopamine-card rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="aspect-video w-full bg-slate-800 relative overflow-hidden">
+                        <img src="/static/picture/photo-1498837167922-ddd27525d352.jpeg" alt="极简烘焙制作" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[10px] bg-black/75 rounded text-white font-mono">08:15</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                            <span class="px-4 py-2 bg-dopamine-cyan text-dopamine-dark rounded-full font-bold text-xs"><i class="fas fa-play mr-1"></i> 立即免密观看</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white truncate">多巴胺色彩法式烘焙甜点制作</h4>
+                        <div class="flex justify-between items-center mt-3 text-[11px] text-slate-400">
+                            <span><i class="fas fa-heart text-dopamine-pink mr-1"></i> 8.9万点赞</span>
+                            <span>流畅度 100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="group bg-dopamine-card rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="aspect-video w-full bg-slate-800 relative overflow-hidden">
+                        <img src="/static/picture/photo-1447752875215-b2761acb3c5d.jpeg" alt="森林露营生活" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[10px] bg-black/75 rounded text-white font-mono">15:40</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                            <span class="px-4 py-2 bg-dopamine-lime text-dopamine-dark rounded-full font-bold text-xs"><i class="fas fa-play mr-1"></i> 立即免密观看</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white truncate">深夜暴雨！森林白噪露营体验</h4>
+                        <div class="flex justify-between items-center mt-3 text-[11px] text-slate-400">
+                            <span><i class="fas fa-heart text-dopamine-pink mr-1"></i> 14.2万点赞</span>
+                            <span>超清原画</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 4 -->
+                <div class="group bg-dopamine-card rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="aspect-video w-full bg-slate-800 relative overflow-hidden">
+                        <img src="/static/picture/photo-1517841905240-472988babdf9.jpeg" alt="皮革雕刻" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[10px] bg-black/75 rounded text-white font-mono">11:05</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+                            <span class="px-4 py-2 bg-purple-500 text-dopamine-dark rounded-full font-bold text-xs"><i class="fas fa-play mr-1"></i> 立即免密观看</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-sm font-bold text-white truncate">手工真皮挎包精细雕花过程</h4>
+                        <div class="flex justify-between items-center mt-3 text-[11px] text-slate-400">
+                            <span><i class="fas fa-heart text-dopamine-pink mr-1"></i> 5.1万点赞</span>
+                            <span>极致纯净</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Recommendations Section -->
+    <section class="py-20 bg-dopamine-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-white">本周金牌创作者推荐</h2>
+                <div class="h-1 w-20 bg-dopamine-cyan mx-auto mt-4 rounded"></div>
+                <p class="mt-4 text-slate-400">各路垂类领域大神云集，每天实时更新优质手工教程与个人Vlog作品。</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Creator Card 1 -->
+                <div class="bg-dopamine-card rounded-3xl p-6 text-center border border-slate-800 hover:border-dopamine-pink transition-all">
+                    <img src="/static/picture/photo-1539571696357-5a69c17a67c6.jpeg" alt="创作者头像" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-dopamine-pink shadow-dopamine-glow">
+                    <h3 class="mt-4 text-base font-bold text-white">@机械手工狂魔</h3>
+                    <p class="text-xs text-dopamine-cyan mt-1">金属手工模型 / 雕刻专家</p>
+                    <div class="mt-4 flex justify-around text-xs text-slate-400">
+                        <div>
+                            <span class="block font-bold text-white">45.8W</span>
+                            粉丝数
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white">126</span>
+                            作品量
+                        </div>
+                    </div>
+                    <button class="mt-6 w-full py-2 bg-gradient-to-r from-purple-800 to-dopamine-purple hover:from-dopamine-pink hover:to-dopamine-purple text-xs font-bold rounded-xl transition">加关注</button>
+                </div>
+
+                <!-- Creator Card 2 -->
+                <div class="bg-dopamine-card rounded-3xl p-6 text-center border border-slate-800 hover:border-dopamine-cyan transition-all">
+                    <img src="/static/picture/photo-1494790108377-be9c29b29330.jpeg" alt="创作者头像" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-dopamine-cyan shadow-cyan-glow">
+                    <h3 class="mt-4 text-base font-bold text-white">@悠悠在南山</h3>
+                    <p class="text-xs text-dopamine-lime mt-1">田园慢生活 / 自制美食Vlog</p>
+                    <div class="mt-4 flex justify-around text-xs text-slate-400">
+                        <div>
+                            <span class="block font-bold text-white">89.2W</span>
+                            粉丝数
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white">204</span>
+                            作品量
+                        </div>
+                    </div>
+                    <button class="mt-6 w-full py-2 bg-gradient-to-r from-purple-800 to-dopamine-purple hover:from-dopamine-pink hover:to-dopamine-purple text-xs font-bold rounded-xl transition">加关注</button>
+                </div>
+
+                <!-- Creator Card 3 -->
+                <div class="bg-dopamine-card rounded-3xl p-6 text-center border border-slate-800 hover:border-dopamine-lime transition-all">
+                    <img src="/static/picture/photo-1507003211169-0a1dd7228f2d.jpeg" alt="创作者头像" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-dopamine-lime shadow-lime-glow">
+                    <h3 class="mt-4 text-base font-bold text-white">@极客皮雕屋</h3>
+                    <p class="text-xs text-dopamine-pink mt-1">皮艺手工 / 手袋定制教学</p>
+                    <div class="mt-4 flex justify-around text-xs text-slate-400">
+                        <div>
+                            <span class="block font-bold text-white">21.5W</span>
+                            粉丝数
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white">88</span>
+                            作品量
+                        </div>
+                    </div>
+                    <button class="mt-6 w-full py-2 bg-gradient-to-r from-purple-800 to-dopamine-purple hover:from-dopamine-pink hover:to-dopamine-purple text-xs font-bold rounded-xl transition">加关注</button>
+                </div>
+
+                <!-- Creator Card 4 -->
+                <div class="bg-dopamine-card rounded-3xl p-6 text-center border border-slate-800 hover:border-purple-500 transition-all">
+                    <img src="/static/picture/photo-1544005313-94ddf0286df2.jpeg" alt="创作者头像" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-purple-500">
+                    <h3 class="mt-4 text-base font-bold text-white">@晨曦旅人Vlog</h3>
+                    <p class="text-xs text-slate-300 mt-1">环球旅行 / 房车生活记录</p>
+                    <div class="mt-4 flex justify-around text-xs text-slate-400">
+                        <div>
+                            <span class="block font-bold text-white">120.6W</span>
+                            粉丝数
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white">350</span>
+                            作品量
+                        </div>
+                    </div>
+                    <button class="mt-6 w-full py-2 bg-gradient-to-r from-purple-800 to-dopamine-purple hover:from-dopamine-pink hover:to-dopamine-purple text-xs font-bold rounded-xl transition">加关注</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Platform App Download Section -->
+    <section id="download" class="py-20 relative bg-gradient-to-r from-purple-950/60 to-dopamine-dark border-t border-purple-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-900 via-dopamine-card to-slate-950 rounded-3xl p-8 lg:p-16 border-2 border-dopamine-pink/30 shadow-dopamine-glow flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="max-w-xl text-center lg:text-left space-y-6">
+                    <span class="px-3.5 py-1.5 text-xs font-bold bg-dopamine-pink text-white rounded-full uppercase tracking-wider">客户端全新上线</span>
+                    <h2 class="text-3xl sm:text-5xl font-black leading-tight text-white">随时随地，畅享兴趣 <br><span class="text-dopamine-cyan">蘑菇视频手机版APP</span></h2>
+                    <p class="text-slate-400">蘑菇视频完美支持iOS与Android移动生态，官方提供高速安全安装渠道。一键安装，秒速加载，带你领略无延迟画质下的兴趣视频世界。</p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="#" class="flex items-center space-x-3 bg-slate-950 hover:bg-dopamine-pink text-white px-6 py-3 rounded-2xl border border-slate-800 transition shadow-lg group">
+                            <i class="fab fa-apple text-3xl group-hover:text-slate-950"></i>
+                            <div class="text-left">
+                                <span class="block text-[10px] text-slate-400 group-hover:text-slate-950">Download on the</span>
+                                <span class="block text-sm font-bold group-hover:text-slate-950">App Store (iOS)</span>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center space-x-3 bg-slate-950 hover:bg-dopamine-cyan text-slate-950 px-6 py-3 rounded-2xl border border-slate-800 transition shadow-lg group">
+                            <i class="fab fa-android text-3xl text-dopamine-cyan group-hover:text-slate-950"></i>
+                            <div class="text-left text-white group-hover:text-slate-950">
+                                <span class="block text-[10px] text-slate-400 group-hover:text-slate-950">Download for</span>
+                                <span class="block text-sm font-bold">Android (APK)</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-slate-950/80 rounded-2xl border border-slate-800 max-w-xs">
+                    <div class="w-48 h-48 bg-white p-2 rounded-xl flex items-center justify-center">
+                        <!-- Mock QR code representing safe download -->
+                        <div class="w-full h-full bg-slate-100 flex items-center justify-center border-2 border-dashed border-slate-300">
+                            <i class="fas fa-qrcode text-7xl text-dopamine-dark"></i>
+                        </div>
+                    </div>
+                    <span class="mt-4 text-xs font-bold text-dopamine-lime"><i class="fas fa-shield-alt mr-1"></i> 蘑菇官网安全认证无毒安装包</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Feedback Section (6 Feedbacks) -->
+    <section class="py-20 bg-dopamine-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-white">千万用户的真实口碑反馈</h2>
+                <div class="h-1 w-20 bg-dopamine-lime mx-auto mt-4 rounded"></div>
+                <p class="mt-4 text-slate-400">听听创作者与观众为什么选择并在蘑菇视频中停留。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-dopamine-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center font-bold text-white text-sm">W</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">王小明</h4>
+                            <div class="text-dopamine-lime text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300">在蘑菇视频里学到了很多做手工的技巧，木工和皮具教学非常精细，很多手工博主还会耐心地在评论区互动，体验很棒！</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-dopamine-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-cyan-600 flex items-center justify-center font-bold text-white text-sm">Z</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">张静轩</h4>
+                            <div class="text-dopamine-lime text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300">蘑菇视频手机APP操作极其流畅，没有任何恶心的弹窗。最喜欢睡前刷刷各种生活Vlog，真的能激发对生活的热爱。</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-dopamine-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center font-bold text-white text-sm">L</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">李雷的日记</h4>
+                            <div class="text-dopamine-lime text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300">作为一个独立Vlog制作者，蘑菇视频的算法对中低腰创作者非常友好，让我们的劳动成果真正能被志趣相投的粉丝看到。</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-dopamine-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-lime-600 flex items-center justify-center font-bold text-slate-950 text-sm">C</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">陈木工</h4>
+                            <div class="text-dopamine-lime text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300">无延迟的高清直播功能必须赞一个。我每周在平台做手艺直播，观众反馈画面很实时，互动没有任何卡顿，点赞！</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-dopamine-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-600 flex items-center justify-center font-bold text-white text-sm">M</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">麦子旅人</h4>
+                            <div class="text-dopamine-lime text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300">我用的是ios版，安装过程很流畅，更新也很稳定。经常可以在蘑菇tv上发现很多其他平台看不到的小众垂类优质创作者。</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-dopamine-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-600 flex items-center justify-center font-bold text-white text-sm">X</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">小七手作</h4>
+                            <div class="text-dopamine-lime text-[10px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300">非常棒的垂直兴趣社区，能够给手工博主带来很大的激励。每次看到粉丝热评和超高点赞，做手工就更有劲头了。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (5 items) -->
+    <section id="faq" class="py-20 bg-slate-950/60 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white">常见问题与疑问解答</h2>
+                <div class="h-1 w-20 bg-dopamine-purple mx-auto mt-4 rounded"></div>
+                <p class="mt-4 text-slate-400">针对用户在使用蘑菇视频过程中遇到的疑问，我们在此进行官方解答。</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-dopamine-card rounded-2xl border border-slate-800 overflow-hidden" open>
+                    <summary class="flex justify-between items-center p-6 text-base font-bold text-white cursor-pointer select-none hover:bg-slate-900 transition">
+                        <span>1. 蘑菇视频APP是免费在线观看的吗？是否有次数限制？</span>
+                        <span class="text-dopamine-pink transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 pt-0 border-t border-slate-800/50 text-sm text-slate-300 leading-relaxed bg-slate-900/30">
+                        是的，蘑菇视频对所有注册用户提供完全免费的在线观看服务。我们承诺所有的生活Vlog、手工艺视频以及热门直播都可以无限次流畅播放，不存在隐藏收费或次数额度限制。
+                    </div>
+                </details>
+
+                <details class="group bg-dopamine-card rounded-2xl border border-slate-800 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 text-base font-bold text-white cursor-pointer select-none hover:bg-slate-900 transition">
+                        <span>2. 如何安全下载并安装蘑菇视频手机版APP客户端？</span>
+                        <span class="text-dopamine-cyan transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 pt-0 border-t border-slate-800/50 text-sm text-slate-300 leading-relaxed bg-slate-900/30">
+                        iOS端用户可以直接在本官网扫描下载指引二维码，或访问官方指定的App Store下载安全包。Android端用户可直接下载官方签名APK包进行极速安装，安装前请确保您的设备允许来自可信源的安装权限。
+                    </div>
+                </details>
+
+                <details class="group bg-dopamine-card rounded-2xl border border-slate-800 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 text-base font-bold text-white cursor-pointer select-none hover:bg-slate-900 transition">
+                        <span>3. 蘑菇视频社区专注于哪些垂类内容？</span>
+                        <span class="text-dopamine-lime transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 pt-0 border-t border-slate-800/50 text-sm text-slate-300 leading-relaxed bg-slate-900/30">
+                        我们核心深耕生活日常Vlog、传统与现代手工DIY、美食制作、户外旅行探险等垂直兴趣内容。在这里，你可以与大批手工艺匠人、Vlogger博主实时在线探讨制作技艺，分享生活态度。
+                    </div>
+                </details>
+
+                <details class="group bg-dopamine-card rounded-2xl border border-slate-800 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 text-base font-bold text-white cursor-pointer select-none hover:bg-slate-900 transition">
+                        <span>4. 在线直播以及视频播放会出现延迟或卡顿吗？</span>
+                        <span class="text-dopamine-pink transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 pt-0 border-t border-slate-800/50 text-sm text-slate-300 leading-relaxed bg-slate-900/30">
+                        不会。蘑菇视频全平台接入了顶尖的多节点流媒体CDN加速服务。通过动态边缘路由技术与自研流媒体解码算法，平台实现了真正的音视频低时延传输，即使在高流量洪峰时段，也能保障您的观看体验流畅如丝。
+                    </div>
+                </details>
+
+                <details class="group bg-dopamine-card rounded-2xl border border-slate-800 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 text-base font-bold text-white cursor-pointer select-none hover:bg-slate-900 transition">
+                        <span>5. 如何在蘑菇社区里成为一名受认证的原创内容创作者？</span>
+                        <span class="text-dopamine-cyan transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 pt-0 border-t border-slate-800/50 text-sm text-slate-300 leading-relaxed bg-slate-900/30">
+                        任何热爱生活与手工的用户，在注册账号后都可以在APP端“创作者中心”提交原创内容申请。只需发布符合平台规范的高画质原创视频即可通过审核，获得创作者专属徽章与流量扶持。
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="bg-slate-950 border-t border-purple-900/50 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- SEO Promotion Article Section -->
+            <div class="border-b border-slate-900 pb-16 mb-16">
+                <div class="max-w-4xl mx-auto space-y-6 text-slate-400 text-sm leading-relaxed text-justify">
+                    <h3 class="text-xl font-bold text-white mb-4 border-l-4 border-dopamine-pink pl-3">关于蘑菇视频垂直兴趣社区的未来愿景</h3>
+                    <p>
+                        中短视频平台正经历从泛娱乐化向深耕垂直兴趣领域的格局重塑。蘑菇视频聚焦于生活方式记录与高精细度手工创意，为内容创作者与兴趣爱好者搭建起一座高效沟通的桥梁。我们致力于打破信息孤岛，让每一个独特的手工技艺与温情的生活Vlog都能在精准算法与社区生态中找到同频的观众，让热爱在数字空间中生根发芽。
+                    </p>
+                    <p>
+                        垂直化社区的生命力源自内容的真实性与互动深度。在蘑菇视频中，手工艺人、Vlog博主以及各行业专业创作者不再仅仅是内容的输出者，更是社区文化的构建者。通过搭建无延迟的超清直播链路与沉浸式的交互系统，平台保障了每次互动的高效性，使在线观影与知识获取相辅相成，构建了健康、可持续的数字内容循环链条。
+                    </p>
+                    <p>
+                        为了顺应移动互联网生态的快速迭代，蘑菇视频APP提供了跨多终端的无缝融合体验。无论是iOS系统用户还是Android系统用户，均能通过精简高效的客户端实现极速安装与畅快播放。面向未来，我们将持续优化算法引擎与流媒体传输技术，以全景式的生态赋能创作者，为广大用户呈现更具质感、更有温度的垂直兴趣视听世界。
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-slate-400 text-xs mb-16">
+                <div class="space-y-4">
+                    <h4 class="text-sm font-bold text-white">友情链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">热门短视频</a></li>
+                        <li><a href="#" class="hover:text-white transition">手工DIY社区</a></li>
+                        <li><a href="#" class="hover:text-white transition">生活记录Vlog</a></li>
+                        <li><a href="/sitemap.xml" class="text-dopamine-cyan font-bold hover:underline">网站地图 (Sitemap)</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-sm font-bold text-white">权威说明</h4>
+                    <p>蘑菇视频高度重视版权保护与原创内容健康。平台内所有音视频流均经过严格的安全审计，我们积极支持网络清朗行动，保障每一位用户的合法权益。</p>
+                </div>
+                <div class="space-y-4 md:col-span-2">
+                    <h4 class="text-sm font-bold text-white">企业资质及联系方式</h4>
+                    <ul class="space-y-2">
+                        <li>企业名称：广东蘑菇互娱信息技术有限公司</li>
+                        <li>客服服务热线：400-888-9284</li>
+                        <li>意见反馈邮箱：<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0c3cfced4c1c3d4e0cdcfc7d58dd6c9c4c5cf8ec5d8c1cdd0ccc58ec3cfcd">[email&#160;protected]</a></li>
+                        <li>公司总部地址：广东省广东市雨花台区软件大道188号</li>
+                        <li>经营许可证编号：苏B2-20260192</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+                <p>© 2026 广东蘑菇互娱信息技术有限公司 版权所有</p>
+                <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition">
+                    苏ICP备2026017382号-1
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
